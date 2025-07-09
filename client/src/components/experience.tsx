@@ -131,7 +131,23 @@ export function Experience() {
                     <div className="pl-8">
                       <Card 
                         className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
-                        onClick={() => window.open('/attached_assets/LOR Corizo_1751970728640.pdf', '_blank')}
+                        onClick={() => {
+                          const url = '/attached_assets/LOR Corizo_1751970728640.pdf';
+                          // Test if file exists before opening
+                          fetch(url, { method: 'HEAD' })
+                            .then(response => {
+                              if (response.ok) {
+                                window.open(url, '_blank');
+                              } else {
+                                console.error('LOR document not found');
+                                alert('Document not available at the moment');
+                              }
+                            })
+                            .catch(() => {
+                              console.error('Failed to access LOR document');
+                              alert('Document not available at the moment');
+                            });
+                        }}
                       >
                         <CardContent className="p-6">
                           <div className="flex items-center mb-4">
@@ -161,7 +177,21 @@ export function Experience() {
                     
                     <Card 
                       className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
-                      onClick={() => window.open('/attached_assets/LOR Corizo_1751970728640.pdf', '_blank')}
+                      onClick={() => {
+                        const url = '/attached_assets/LOR Corizo_1751970728640.pdf';
+                        fetch(url, { method: 'HEAD' })
+                          .then(response => {
+                            if (response.ok) {
+                              window.open(url, '_blank');
+                            } else {
+                              console.error('LOR document not found');
+                              alert('Document not available at the moment');
+                            }
+                          })
+                          .catch(() => {
+                            alert('Document not available at the moment');
+                          });
+                      }}
                     >
                       <CardContent className="p-4">
                         <div className="flex items-center">
@@ -190,7 +220,22 @@ export function Experience() {
                     <div className="pr-8">
                       <Card 
                         className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
-                        onClick={() => window.open('/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf', '_blank')}
+                        onClick={() => {
+                          const url = '/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf';
+                          fetch(url, { method: 'HEAD' })
+                            .then(response => {
+                              if (response.ok) {
+                                window.open(url, '_blank');
+                              } else {
+                                console.error('Prodigy LOR document not found');
+                                alert('Document not available at the moment');
+                              }
+                            })
+                            .catch(() => {
+                              console.error('Failed to access Prodigy LOR document');
+                              alert('Document not available at the moment');
+                            });
+                        }}
                       >
                         <CardContent className="p-6">
                           <div className="flex items-center mb-4">
@@ -235,7 +280,21 @@ export function Experience() {
                     
                     <Card 
                       className="bg-gray-800/50 backdrop-blur-sm border-gray-700/50 cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105"
-                      onClick={() => window.open('/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf', '_blank')}
+                      onClick={() => {
+                        const url = '/attached_assets/prodigy infotech Letter of Recommendation_1751970745885.pdf';
+                        fetch(url, { method: 'HEAD' })
+                          .then(response => {
+                            if (response.ok) {
+                              window.open(url, '_blank');
+                            } else {
+                              console.error('Prodigy LOR document not found');
+                              alert('Document not available at the moment');
+                            }
+                          })
+                          .catch(() => {
+                            alert('Document not available at the moment');
+                          });
+                      }}
                     >
                       <CardContent className="p-4">
                         <div className="flex items-center">
@@ -340,7 +399,20 @@ export function Experience() {
                         src={cert.imageUrl} 
                         alt={cert.title}
                         className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                        onLoad={() => console.log(`Certificate image loaded: ${cert.title}`)}
+                        onError={(e) => {
+                          console.log(`Certificate image failed to load: ${cert.title}, URL: ${cert.imageUrl}`);
+                          e.currentTarget.style.display = 'none';
+                          const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (nextElement) {
+                            nextElement.style.display = 'block';
+                          }
+                        }}
                       />
+                      <div className="text-center mt-2 hidden bg-gray-600 p-4 rounded">
+                        <Award className="h-12 w-12 mx-auto mb-2 text-gray-400" />
+                        <p className="text-sm text-gray-400">Certificate Preview Unavailable</p>
+                      </div>
                       <p className="text-sm text-center mt-2 text-gray-300">{cert.title}</p>
                     </div>
                   ))}
@@ -351,14 +423,20 @@ export function Experience() {
                     src={selectedCert.imageUrl} 
                     alt={selectedCert.title}
                     className="max-w-full max-h-[600px] mx-auto rounded-lg shadow-lg"
+                    onLoad={() => console.log(`Modal certificate image loaded: ${selectedCert.title}`)}
                     onError={(e) => {
+                      console.log(`Modal certificate image failed: ${selectedCert.title}, URL: ${selectedCert.imageUrl}`);
                       e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling.style.display = 'block';
+                      const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                      if (nextElement) {
+                        nextElement.style.display = 'block';
+                      }
                     }}
                   />
-                  <div className="text-gray-400 hidden">
+                  <div className="text-gray-400 hidden bg-gray-600 p-8 rounded">
                     <Award className={`h-24 w-24 mx-auto mb-4 ${selectedCert.color}`} />
                     <p className="text-lg">Certificate Image Not Available</p>
+                    <p className="text-sm mt-2">Please check if the file exists in attached_assets folder</p>
                   </div>
                 </div>
               )}

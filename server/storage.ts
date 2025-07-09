@@ -83,9 +83,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "Weather API"],
         links: {
-          linkedin: "", // User will fill this
-          github: "", // User will fill this
-          portfolio: "" // User will fill this
+          linkedin: "",
+          github: "",
+          portfolio: ""
         },
         category: "web-development",
         image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&q=80",
@@ -106,8 +106,8 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
         links: {
-          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7332114830104961025-Hntg?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",// User will fill this
-          github: "https://github.com/hareshbharadwaj/CV_hand_detection", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7332114830104961025-Hntg?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",
+          github: "https://github.com/hareshbharadwaj/CV_hand_detection",
           video: "/attached_assets/hand.mp4"
         },
         category: "computer-vision",
@@ -127,8 +127,8 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
         links: {
-          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-gesturerecognition-virtualdrawing-activity-7332274282397417474-Hub2?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
-          github: "https://github.com/hareshbharadwaj/CV_painter", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-gesturerecognition-virtualdrawing-activity-7332274282397417474-Hub2?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",
+          github: "https://github.com/hareshbharadwaj/CV_painter",
           video: "/attached_assets/paint.mp4"
         },
         category: "computer-vision",
@@ -148,8 +148,8 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "OpenCV", "MediaPipe", "Pygame"],
         links: {
-          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_hand-controlled-snake-game-with-opencv-activity-7336788164998479872-scKj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
-          github: "https://github.com/hareshbharadwaj/CV_snake_game", // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_hand-controlled-snake-game-with-opencv-activity-7336788164998479872-scKj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",
+          github: "https://github.com/hareshbharadwaj/CV_snake_game",
           video: "/attached_assets/snake.mp4"
         },
         category: "computer-vision",
@@ -171,10 +171,10 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7339332599707811840-VYjy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",
           github: "https://github.com/hareshbharadwaj/CV_Subway",
-          video: "" // Video coming soon
+          video: ""
         },
         category: "computer-vision",
-        image: "code", // Use icon instead of video for now
+        image: "code",
         imageType: "icon"
       },
       
@@ -200,9 +200,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
         links: {
-          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_machinelearning-spacedebris-aerospaceai-activity-7340638750441357315-hYfh?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
-          github: "", // User will fill this
-          paper: "" // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_machinelearning-spacedebris-aerospaceai-activity-7340638750441357315-hYfh?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",
+          github: "",
+          paper: ""
         },
         category: "machine-learning",
         image: "satellite"
@@ -223,9 +223,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Java", "Android Studio", "SQLite", "Firebase", "Material Design"],
         links: {
-          linkedin: "", // User will fill this
-          github: "https://github.com/hareshbharadwaj/Healthcare_app/releases/tag/v2.0", // User will fill this
-          playstore: "" // User will fill this
+          linkedin: "",
+          github: "https://github.com/hareshbharadwaj/Healthcare_app/releases/tag/v2.0",
+          playstore: ""
         },
         category: "mobile-development",
         image: "android"
@@ -239,35 +239,12 @@ export class MemStorage implements IStorage {
           "Multiple difficulty levels",
           "Game statistics tracking",
           "Smooth animations",
-          "Score tracking system",
-          "Single-player mode"
+          "Score tracking system"
         ],
         technologies: ["Java", "Android Studio", "SQLite", "Material Design"],
         links: {
-          linkedin: "", // User will fill this
-          github: "https://github.com/hareshbharadwaj/tictactoe-android-app/releases/tag/v1.0", // User will fill this
-          demo: "" // User will fill this
-        },
-        category: "mobile-development",
-        image: "android"
-      },
-      {
-        title: "Urban Service Booking Platform",
-        description: "Service booking application with dual user roles and Streamlit-based worker analytics.",
-        detailedDescription: "A comprehensive urban service booking platform with user and admin roles, real-time booking capabilities, secure authentication, and advanced analytics dashboard.",
-        features: [
-          "User and admin role management",
-          "Real-time service booking",
-          "Secure authentication system",
-          "Rating and review system",
-          "Streamlit-based worker analytics",
-          "Service provider management"
-        ],
-        technologies: ["Java", "Android Studio", "Firebase", "Streamlit", "Material Design"],
-        links: {
-          linkedin: "", // User will fill this
-          github: "https://github.com/hareshbharadwaj/Urban_app/releases/tag/v2.0", // User will fill this
-          demo: "" // User will fill this
+          linkedin: "",
+          github: "https://github.com/hareshbharadwaj/tictactoe-android-app/releases/tag/v1.0"
         },
         category: "mobile-development",
         image: "android"
