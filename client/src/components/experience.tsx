@@ -10,7 +10,7 @@ export function Experience() {
     {
       title: "Corizo intenship certificate",
       description: "Professional LinkedIn presence showcasing Corizo internship",
-      imageUrl: "/attached_assets/corizo li _1751970802230.jpg",
+      imageUrl: "/attached_assets/corizo%20li%20_1751970802230.jpg",
       color: "text-blue-400"
     },
     {
@@ -57,7 +57,7 @@ export function Experience() {
       title: "Oracle SQL Specialist",
       description: "Oracle Database SQL Certified Specialist",
       color: "text-orange-400",
-      imageUrl: "/attached_assets/oraclespl_1751968622048.png"
+      imageUrl: "/attached_assets/oraclesql_1751968622048.png"
     },
     {
       title: "FreeCodeCamp JavaScript Developer",
