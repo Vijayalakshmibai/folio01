@@ -43,7 +43,7 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-ecommerce-homemadeproducts-activity-7332062155262894080-N79g?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2KRVx3fgY",
           github: "https://github.com/hareshbharadwaj/Homemade_Marketplace_web",
-          demo: "/attached_assets/homemade_1751969238298.mp4"
+          demo: "" // Will be updated once video is uploaded
         },
         category: "web-development",
         image: "shopping-cart"
@@ -64,10 +64,10 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-firstproject-fullstackdevelopment-activity-7260217850185818112-Q0D5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgy",
           github: "https://github.com/hareshbharadwaj/foodie-app",
-          demo: "/attached_assets/foodie-major project_1751968207216.mp4"
+          demo: "" // Will be updated once video is uploaded
         },
         category: "web-development",
-        image: "/attached_assets/foodie-major project_1751968207216.mp4"
+        image: "utensils"
       },
       {
         title: "Frontend Development Showcase",
@@ -107,11 +107,10 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7332114830104961025-Hntg?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",// User will fill this
           github: "https://github.com/hareshbharadwaj/CV_hand_detection", // User will fill this
-          video: "/attached_assets/hand.mp4"
+          video: "" // Will be updated once video is uploaded
         },
         category: "computer-vision",
-        image: "/attached_assets/hand.mp4",
-        imageType: "video"
+        image: "eye"
       },
       {
         title: "Screen Painter",
@@ -128,11 +127,10 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-gesturerecognition-virtualdrawing-activity-7332274282397417474-Hub2?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_painter", // User will fill this
-          video: "/attached_assets/paint.mp4"
+          video: "" // Will be updated once video is uploaded
         },
         category: "computer-vision",
-        image: "/attached_assets/paint.mp4",
-        imageType: "video"
+        image: "eye"
       },
       {
         title: "Snake Game with Hand Control",
@@ -149,11 +147,10 @@ export class MemStorage implements IStorage {
         links: {
           linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_hand-controlled-snake-game-with-opencv-activity-7336788164998479872-scKj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
           github: "https://github.com/hareshbharadwaj/CV_snake_game", // User will fill this
-          video: "/attached_assets/snake.mp4"
+          video: "" // Will be updated once video is uploaded
         },
         category: "computer-vision",
-        image: "/attached_assets/snake.mp4",
-        imageType: "video"
+        image: "eye"
       },
       {
         title: "Subway Surfers Hand Control",
@@ -173,8 +170,7 @@ export class MemStorage implements IStorage {
           video: "" // Video coming soon
         },
         category: "computer-vision",
-        image: "code", // Use icon instead of video for now
-        imageType: "icon"
+        image: "eye"
       },
       
       // Machine Learning Research

@@ -38,11 +38,7 @@ app.use((req, res, next) => {
 });
 
 // Serve attached assets statically
-app.use('/attached_assets', express.static(path.resolve(import.meta.dirname, '../attached_assets'), {
-  maxAge: '1d',
-  etag: false,
-  lastModified: false
-}));
+app.use('/attached_assets', express.static(path.resolve(import.meta.dirname, '../attached_assets')));
 
 // Also serve from client/public for development
 if (app.get("env") === "development") {
