@@ -38,38 +38,7 @@ app.use((req, res, next) => {
 });
 
 // Serve attached assets statically
-app.use('/attached_assets', express.static(path.resolve(import.meta.dirname, '../attached_assets'), {
-  maxAge: '1d', // Cache for 1 day
-  setHeaders: (res, path) => {
-    console.log(`Serving asset: ${path}`);
-    if (path.endsWith('.mp4')) {
-      res.setHeader('Content-Type', 'video/mp4');
-      res.setHeader('Accept-Ranges', 'bytes');
-    }
-    if (path.endsWith('.jpg') || path.endsWith('.jpeg')) {
-      res.setHeader('Content-Type', 'image/jpeg');
-    }
-    if (path.endsWith('.png')) {
-      res.setHeader('Content-Type', 'image/png');
-    }
-    if (path.endsWith('.pdf')) {
-      res.setHeader('Content-Type', 'application/pdf');
-      res.setHeader('Content-Disposition', 'inline');
-    }
-  }
-}));
-
-// Add a debug route to check available assets
-app.get('/api/assets', (req, res) => {
-  const fs = require('fs');
-  const assetsPath = path.resolve(import.meta.dirname, '../attached_assets');
-  try {
-    const files = fs.readdirSync(assetsPath);
-    res.json({ files, path: assetsPath });
-  } catch (error) {
-    res.status(500).json({ error: 'Cannot read assets directory', path: assetsPath });
-  }
-});
+app.use('/attached_assets', express.static(path.resolve(import.meta.dirname, '../attached_assets')));
 
 (async () => {
   const server = await registerRoutes(app);
