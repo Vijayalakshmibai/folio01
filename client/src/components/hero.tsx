@@ -22,6 +22,10 @@ export function Hero() {
                 src="/attached_assets/profilepic.jpg"
                 alt="Haresh Bharadwaj R"
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  console.log('Profile image failed to load');
+                  e.currentTarget.style.display = 'none';
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
             </motion.div>

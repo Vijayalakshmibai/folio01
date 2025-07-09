@@ -38,7 +38,22 @@ app.use((req, res, next) => {
 });
 
 // Serve attached assets statically
-app.use('/attached_assets', express.static(path.resolve(import.meta.dirname, '../attached_assets')));
+app.use('/attached_assets', express.static(path.resolve(import.meta.dirname, '../attached_assets'), {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.mp4')) {
+      res.setHeader('Content-Type', 'video/mp4');
+    }
+    if (path.endsWith('.jpg') || path.endsWith('.jpeg')) {
+      res.setHeader('Content-Type', 'image/jpeg');
+    }
+    if (path.endsWith('.png')) {
+      res.setHeader('Content-Type', 'image/png');
+    }
+    if (path.endsWith('.pdf')) {
+      res.setHeader('Content-Type', 'application/pdf');
+    }
+  }
+}));
 
 (async () => {
   const server = await registerRoutes(app);

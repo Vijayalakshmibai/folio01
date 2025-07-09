@@ -175,7 +175,26 @@ export function Projects() {
                     >
                       <CardContent className="p-6">
                         <div className={`h-48 bg-gradient-to-br ${gradientColor} rounded-lg mb-6 flex items-center justify-center`}>
-                          <IconComponent className="h-16 w-16 text-white" />
+                          {project.image && typeof project.image === 'string' && project.image.includes('.mp4') ? (
+                            <video 
+                              className="w-full h-full object-cover rounded-lg"
+                              autoPlay
+                              muted
+                              loop
+                              playsInline
+                              onError={(e) => {
+                                console.log('Video failed to load:', project.image);
+                                e.currentTarget.style.display = 'none';
+                                const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                                if (fallback) fallback.style.display = 'flex';
+                              }}
+                            >
+                              <source src={project.image} type="video/mp4" />
+                            </video>
+                          ) : null}
+                          <div className={`flex items-center justify-center w-full h-full ${project.image && project.image.includes('.mp4') ? 'hidden' : ''}`}>
+                            <IconComponent className="h-16 w-16 text-white" />
+                          </div>
                         </div>
                         
                         <h3 className="text-xl font-bold mb-3 text-indigo-400 group-hover:text-indigo-300 transition-colors">

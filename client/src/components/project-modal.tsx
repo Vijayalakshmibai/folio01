@@ -176,6 +176,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                         controls 
                         className="w-full max-h-96 rounded-lg"
                         preload="metadata"
+                        controlsList="nodownload"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
                           const nextElement = e.currentTarget.nextElementSibling as HTMLElement;

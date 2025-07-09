@@ -67,7 +67,7 @@ export class MemStorage implements IStorage {
           demo: "/attached_assets/foodie-major project_1751968207216.mp4"
         },
         category: "web-development",
-        image: "utensils"
+        image: "/attached_assets/foodie-major project_1751968207216.mp4"
       },
       {
         title: "Frontend Development Showcase",
