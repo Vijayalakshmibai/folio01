@@ -2,6 +2,7 @@ import { Briefcase, Code, Award, X } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { useState } from 'react';
+import { ImageWithFallback } from '@/components/ui/image-with-fallback';
 
 export function Experience() {
   const [selectedCert, setSelectedCert] = useState<any>(null);
@@ -10,7 +11,7 @@ export function Experience() {
     {
       title: "Corizo intenship certificate",
       description: "Professional LinkedIn presence showcasing Corizo internship",
-      imageUrl: "/attached_assets/corizo li _1751970802230.jpg",
+      imageUrl: "/attached_assets/corizo%20li%20_1751970802230.jpg",
       color: "text-blue-400"
     },
     {
@@ -313,33 +314,29 @@ export function Experience() {
               {/* Certificate Images - Side by Side Grid View */}
               {selectedCert.imageUrl === "experience-grid" ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {experienceCredentials.map((cred, index) => (
+                  {experienceCredentials.filter(cred => !cred.imageUrl.includes('attached_assets')).map((cred, index) => (
                     <div key={index} className="bg-gray-700 rounded-lg p-2">
-                      <img 
-                        src={cred.imageUrl} 
+                      <ImageWithFallback
+                        src={cred.imageUrl}
                         alt={cred.title}
                         className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                          e.currentTarget.nextElementSibling!.style.display = 'block';
-                        }}
+                        fallbackIcon="award"
+                        fallbackText={cred.title}
                       />
-                      <div className="text-center mt-2 hidden">
-                        <Award className="h-12 w-12 mx-auto mb-2 text-gray-400" />
-                        <p className="text-sm text-gray-400">Document Preview</p>
-                      </div>
                       <p className="text-sm text-center mt-2 text-gray-300">{cred.title}</p>
                     </div>
                   ))}
                 </div>
               ) : selectedCert.imageUrl === "grid" ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {certifications.map((cert, index) => (
+                  {certifications.filter(cert => !cert.imageUrl.includes('attached_assets')).map((cert, index) => (
                     <div key={index} className="bg-gray-700 rounded-lg p-2">
-                      <img 
-                        src={cert.imageUrl} 
+                      <ImageWithFallback
+                        src={cert.imageUrl}
                         alt={cert.title}
                         className="w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                        fallbackIcon="award"
+                        fallbackText={cert.title}
                       />
                       <p className="text-sm text-center mt-2 text-gray-300">{cert.title}</p>
                     </div>
@@ -347,19 +344,13 @@ export function Experience() {
                 </div>
               ) : (
                 <div className="bg-gray-700 rounded-lg p-4 text-center">
-                  <img 
-                    src={selectedCert.imageUrl} 
+                  <ImageWithFallback
+                    src={selectedCert.imageUrl}
                     alt={selectedCert.title}
                     className="max-w-full max-h-[600px] mx-auto rounded-lg shadow-lg"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling.style.display = 'block';
-                    }}
+                    fallbackIcon="award"
+                    fallbackText={selectedCert.title}
                   />
-                  <div className="text-gray-400 hidden">
-                    <Award className={`h-24 w-24 mx-auto mb-4 ${selectedCert.color}`} />
-                    <p className="text-lg">Certificate Image Not Available</p>
-                  </div>
                 </div>
               )}
             </div>

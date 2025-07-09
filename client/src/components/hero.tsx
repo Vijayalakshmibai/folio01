@@ -19,7 +19,7 @@ export function Hero() {
               transition={{ duration: 0.5 }}
             >
               <img
-                src="/attached_assets/profilepic.jpg"
+                src="/profilepic.jpg"
                 alt="Haresh Bharadwaj R"
                 className="w-full h-full object-cover"
               />

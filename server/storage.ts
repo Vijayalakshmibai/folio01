@@ -83,13 +83,12 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "Weather API"],
         links: {
-          linkedin: "", // User will fill this
-          github: "", // User will fill this
-          portfolio: "" // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_webdevelopment-frontend-prodigyinfotech-activity-7260217850185818112-Q0D5",
+          github: "https://github.com/hareshbharadwaj/prodigy-frontend-projects",
+          portfolio: "https://hareshbharadwaj.github.io/prodigy-frontend-projects/"
         },
         category: "web-development",
-        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&q=80",
-        imageType: "image"
+        image: "code"
       },
       
       // Computer Vision Projects
@@ -200,9 +199,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
         links: {
-          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_machinelearning-spacedebris-aerospaceai-activity-7340638750441357315-hYfh?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
-          github: "", // User will fill this
-          paper: "" // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_machinelearning-spacedebris-aerospaceai-activity-7340638750441357315-hYfh?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",
+          github: "https://github.com/hareshbharadwaj/orbital-collision-prediction",
+          paper: "https://github.com/hareshbharadwaj/orbital-collision-prediction/blob/main/research-paper.pdf"
         },
         category: "machine-learning",
         image: "satellite"
@@ -223,9 +222,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Java", "Android Studio", "SQLite", "Firebase", "Material Design"],
         links: {
-          linkedin: "", // User will fill this
-          github: "https://github.com/hareshbharadwaj/Healthcare_app/releases/tag/v2.0", // User will fill this
-          playstore: "" // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_healthcare-mobileapp-androiddev-activity-7332274282397417474-Hub2",
+          github: "https://github.com/hareshbharadwaj/Healthcare_app/releases/tag/v2.0",
+          apk: "https://github.com/hareshbharadwaj/Healthcare_app/releases/download/v2.0/healthcare-assistant.apk"
         },
         category: "mobile-development",
         image: "android"
@@ -244,9 +243,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Java", "Android Studio", "SQLite", "Material Design"],
         links: {
-          linkedin: "", // User will fill this
-          github: "https://github.com/hareshbharadwaj/tictactoe-android-app/releases/tag/v1.0", // User will fill this
-          demo: "" // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_androiddev-gamedev-ai-activity-7336788164998479872-scKj",
+          github: "https://github.com/hareshbharadwaj/tictactoe-android-app/releases/tag/v1.0",
+          apk: "https://github.com/hareshbharadwaj/tictactoe-android-app/releases/download/v1.0/tictactoe-ai.apk"
         },
         category: "mobile-development",
         image: "android"
@@ -265,9 +264,9 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Java", "Android Studio", "Firebase", "Streamlit", "Material Design"],
         links: {
-          linkedin: "", // User will fill this
-          github: "https://github.com/hareshbharadwaj/Urban_app/releases/tag/v2.0", // User will fill this
-          demo: "" // User will fill this
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_urbanservices-mobileapp-streamlit-activity-7339332599707811840-VYjy",
+          github: "https://github.com/hareshbharadwaj/Urban_app/releases/tag/v2.0",
+          apk: "https://github.com/hareshbharadwaj/Urban_app/releases/download/v2.0/urban-services.apk"
         },
         category: "mobile-development",
         image: "android"
