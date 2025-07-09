@@ -170,13 +170,13 @@ export class MemStorage implements IStorage {
         ],
         technologies: ["Python", "OpenCV", "MediaPipe", "Pygame"],
         links: {
-          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7339332599707811840-VYjy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY", // User will fill this
-          github: "https://github.com/hareshbharadwaj/CV_Subway", // User will fill this
-          video: "/attached_assets/subway.mp4"
+          linkedin: "https://www.linkedin.com/posts/haresh-bharadwaj-r-566556229_computervision-opencv-mediapipe-activity-7339332599707811840-VYjy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADk2TJ4BoYYKu_vTPlvJrxFLYD2kRVx3fgY",
+          github: "https://github.com/hareshbharadwaj/CV_Subway",
+          video: "" // Video coming soon
         },
         category: "computer-vision",
-        image: "/attached_assets/subway.mp4",
-        imageType: "video"
+        image: "code", // Use icon instead of video for now
+        imageType: "icon"
       },
       
       // Machine Learning Research
