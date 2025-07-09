@@ -178,7 +178,10 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                         preload="metadata"
                         onError={(e) => {
                           e.currentTarget.style.display = 'none';
-                          e.currentTarget.nextElementSibling!.style.display = 'block';
+                          const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (nextElement) {
+                            nextElement.style.display = 'block';
+                          }
                         }}
                       >
                         <source src={videoUrl} type="video/mp4" />
