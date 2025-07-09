@@ -23,9 +23,16 @@ export function Hero() {
                 alt="Haresh Bharadwaj R"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  console.log('Profile image failed to load');
+                  console.log('Profile image failed to load, trying alternative path');
+                  e.currentTarget.src = '/profilepic.jpg';
                   e.currentTarget.style.display = 'none';
+                  // Show a fallback div with initials
+                  const fallback = document.createElement('div');
+                  fallback.className = 'w-full h-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-6xl font-bold';
+                  fallback.textContent = 'HB';
+                  e.currentTarget.parentNode?.appendChild(fallback);
                 }}
+                onLoad={() => console.log('Profile image loaded successfully')}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"></div>
             </motion.div>
@@ -87,6 +94,13 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                onClick={(e) => {
+                  // Try alternative path if main path fails
+                  const link = e.currentTarget;
+                  fetch(link.href).catch(() => {
+                    link.href = '/CV.pdf';
+                  });
+                }}
               >
                 <FileText className="w-5 h-5 mr-2" />
                 View Resume
