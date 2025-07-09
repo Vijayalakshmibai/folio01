@@ -175,10 +175,19 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                       controls 
                       className="w-full max-h-96 rounded-lg"
                       preload="metadata"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.nextElementSibling!.style.display = 'block';
+                      }}
                     >
                       <source src={videoUrl} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
+                    <div className="text-gray-400 text-center py-8 hidden">
+                      <Eye className="h-16 w-16 mx-auto mb-4" />
+                      <p className="text-lg">Video Demo Unavailable</p>
+                      <p className="text-sm">Please check back later</p>
+                    </div>
                   ) : (
                     <div className="text-gray-400 text-center py-8">
                       <Eye className="h-16 w-16 mx-auto mb-4" />
