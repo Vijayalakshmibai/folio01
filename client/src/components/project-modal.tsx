@@ -169,7 +169,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <div className="bg-gray-700 rounded-lg p-4">
                 {(() => {
                   const links = project.links as Record<string, string>;
-                  const videoUrl = links.video;
+                  const videoUrl = links.video || links.demo;
                   return videoUrl && videoUrl !== "" ? (
                     <video 
                       controls 
